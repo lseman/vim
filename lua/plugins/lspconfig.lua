@@ -31,5 +31,13 @@ return {
 			},
 			init_options = { usePlaceholders = true, completeUnimported = true, clangdFileStatus = true },
 		})
+		require('lspconfig').ruff_lsp.setup {
+			init_options = {
+			  settings = {
+				-- Any extra CLI arguments for `ruff` go here.
+				args = {},
+			  }
+			}
+		  }
 	end
 }
